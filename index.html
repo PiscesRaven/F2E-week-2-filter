@@ -6,17 +6,30 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <nav class="nav-header">
-        <div class="nav-search"></div>
+        <div id="nav-row">
+            <h1 id="nav-home">
+                <a href="index.html">HaveFun</a>
+            </h1>
+            <div id="nav-search">
+                <i></i>
+                <input type="text" placeholder="Explore your own activities"></input>
+            </div>
+        </div>
+
     </nav>
-    <section class="container">
+
+
+
+    <section class="container-fluid">
         <div class="row">
-            <aside class="aside col-lg-4">
+            <aside class="aside">
                 <div class="aside-area">
                     <h3 class="aside-area-title">Location</h3>
                     <select name="" id="">
@@ -25,27 +38,56 @@
                 </div>
                 <div class="aside-area">
                     <h3 class="aside-area-title">Date</h3>
-                    from
-                    <input type="date" name="" id=""> to
-                    <input type="date" name="" id="">
+                    <h5 class="aside-area-date">from
+                        <input type="date" name="" class="datepicker"> </h5>
+                    <h5 class="aside-area-date">
+                        to
+                        <input type="date" name="" id="">
+                    </h5>
+
                 </div>
                 <div class="aside-area">
                     <h3 class="aside-area-title">Categories</h3>
-                    <input type="checkbox" name="" id="">
-                    <h3>All</h3>
-                    <input type="checkbox" name="" id="">
-                    <h3>Entertainment</h3>
-                    <input type="checkbox" name="" id="">
-                    <h3>Foood</h3>
-                    <input type="checkbox" name="" id="">
-                    <h3>Learning</h3>
-                    <input type="checkbox" name="" id="">
-                    <h3>Outdoors</h3>
+                    <h5>
+                        <label>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        All
+                    </h5>
+
+                    <h5>
+                        <label>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        Entertainment
+                    </h5>
+
+                    <h5>
+                        <label>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        Food
+                        <h5>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            Learning
+                        </h5>
+
+                        <h5>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            Outdoors
+                        </h5>
                 </div>
 
             </aside>
-
-
             <section class="article-area col-lg-8">
                 <h2>Sowing
                     <span>15</span> results by.. </h2>
