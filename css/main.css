@@ -1,3 +1,8 @@
+body {
+    background: #F2F2F2;
+    overflow-x: hidden;
+}
+
 .nav-header {
     background: #9013FE;
     width: 100%;
@@ -10,6 +15,7 @@ input[type="date"] {
     border-radius: 2px;
     width: 169px;
     box-shadow: none;
+    height: 40px;
 }
 
 input[type="checkbox"] {
@@ -20,19 +26,34 @@ input[type="checkbox"] {
     display: inline-flex;
     width: 100%;
     align-items: center;
-    padding-top: 10px;
-    padding-left: 78px;
-    height: 100%;
+    padding-left: 64px;
 }
 
 #nav-home {
     font-size: 36px;
+    color: #fff;
+    text-decoration: none;
 }
 
 #nav-search {
-    margin-left: 150px;
+    margin-left: 50px;
     width: 388px;
     border-bottom: 2px solid #fff;
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+#nav-search>i {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+#nav-search-input {
+    background: #9013FE;
+    border: none;
+    font-size: 20px;
 }
 
 .aside {
@@ -48,12 +69,203 @@ input[type="checkbox"] {
     padding: 24px 40px;
 }
 
+#aside-area-select {
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
 .aside-area-title {
     font-size: 24px;
+    margin-bottom: 26px;
 }
 
 .aside-area-date {
     display: inline-flex;
-    font-size: 20px;
+    font-size: 16px;
     align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.aside-area-date>input {
+    margin-left: 13px;
+    border: none;
+    padding-left: 13px;
+}
+
+.article-area {
+    margin-left: 27px;
+}
+
+#article-area-results {
+    font-size: 24px;
+    margin-top: 24px;
+}
+
+#article-filter>li {
+    border: 1px solid #9013FE;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 16px;
+    width: auto;
+    height: 35px;
+    padding-right: 14px;
+}
+
+.article-post {
+    background: #fff;
+    height: 220px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.article-post-title {
+    font-size: 24px;
+    color: #9013FE;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.img-fluid {
+    height: inherit;
+    padding: 0;
+}
+
+.article-post-info {
+    padding: 24px 20px 24px 20px;
+}
+
+.article-post-text {
+    height: 50px;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.article-post-info-class {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 13px;
+    height: 24px;
+}
+
+.article-post-info-loc-date {
+    display: inline-flex;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.post-info-class-organizer {
+    margin-bottom: 0px;
+}
+
+.post-info-class {
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    background: #D7D7D7;
+    border-radius: 100px;
+    padding: 2px 16px 3px 16px;
+    padding: 2px 16px 3px 16px;
+    margin-left: 20px;
+    margin-bottom: -1px;
+}
+
+.article-post-info-loc-date>i>span {
+    font-size: 16px;
+    color: #9B9B9B;
+    margin-right: 20px;
+}
+
+.link {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+}
+
+@media only screen and (max-width: 992px) {
+    .article-area {
+        margin-left: 25px;
+    }
+    .aside {
+        margin-left: 0;
+    }
+    .article-post {
+        background: #ffffff;
+        display: inline-block;
+        height: auto;
+        margin-bottom: 24px;
+    }
+    .article-post-info {
+        padding: 24px 20px 16px 20px;
+    }
+    .article-post-title {
+        padding-bottom: 6px;
+        line-height: 28px;
+    }
+    .article-post-info-class {
+        margin-bottom: 15px;
+    }
+    .article-post-info-loc-date {
+        display: contents;
+    }
+    .article-post-info-loc-date :first-child {
+        width: 100%;
+        height: 19px;
+        margin-bottom: 8px;
+    }
+    .article-post-info-loc-date :last-child {
+        white-space: initial;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #nav-row {
+        margin-left: 0;
+    }
+    #nav-search {
+        margin-left: 0;
+    }
+    #nav-search-input {
+        font-size: 16px;
+    }
+    .article-area {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .nav-header .article-area {
+        margin: 0 auto;
+    }
+    .aside {
+        width: 100%;
+    }
+    .nav-header {
+        height: auto;
+    }
+    #nav-search {
+        margin: 0;
+        text-align: center;
+        background: #ebebeb;
+        border-bottom: 2px solid #000;
+        margin-bottom: 6px;
+    }
+    #nav-row {
+        padding-left: 0;
+    }
+    #nav-search>i {
+        color: #000;
+    }
+    #nav-search-input {
+        background: #ebebeb;
+    }
+    .article-area {
+        margin-left: 0;
+    }
 }
