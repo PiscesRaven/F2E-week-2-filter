@@ -21,9 +21,9 @@ const t2eApi = 'https://data.kcg.gov.tw/api/action/datastore_search?resource_id=
 ajax(t2eApi, 'get', function (str) {
     var data = JSON.parse(str);
 
-    const dataResults = data.result.records; //存data.result.records
-
-    for (let i = 0; i < dataResults.length; i++) {
+    var dataResults = data.result.records; //存data.result.records
+    console.log(dataResults)
+    for (let i = 0; i < 20; i++) {
         //post的 HTML+ CSS
         const article = `
                 <article class="article-post " data-num=${dataResults[i]._id}>
@@ -36,7 +36,7 @@ ajax(t2eApi, 'get', function (str) {
                             organizer">門票說明</h4>
                             <h4 class="post-info-class">${dataResults[i].Ticketinfo}</h4>
                         </span>
-                        <span class="article-post-info-loc-date">
+             set2           <span class="article-post-info-loc-date">
                             <i class="fas fa-map-marker-alt fa-2x">
                                 <span>${dataResults[i].Zone}</span>
                             </i>
@@ -50,7 +50,28 @@ ajax(t2eApi, 'get', function (str) {
 
         const oArticleArea = document.querySelector('.article-area');
         oArticleArea.innerHTML += article;
-    }
 
+    }
+    let str3 = [];
+    for (let index = 0; index < dataResults.length; index++) {
+        str3.push(dataResults[index].Zone);
+
+    }
+    console.log(str3);
+
+    // const aa = `<option value="${dataResults[i].Zone}">${dataResults[i].Zone}</option>`;
+    let bb = document.querySelector('#aside-area-select');
+
+
+    const set = new Set();
+    let set2 = str3.filter(item => !set.has(item) ? set.add(item) : false);
+    let temp = '';
+    for (let index = 0; index < set2.length; index++) {
+
+        temp += `<option value="${set2[index]}">${set2[index]}</option>`
+    }
+    bb.innerHTML = temp;
+
+    console.log(typeof (set2))
 
 });
